@@ -1,0 +1,12 @@
+<div ng-controller="OptionMenu as vm" ng-cloak layout-align="start center" layout="row">
+  <md-input-container>
+    <label>Mood</label>
+    <md-select ng-model="entry.mood" required>
+      <md-option ng-repeat="mood in moods" value="{{mood}}" name="entry_mood">{{mood}}</md-option>
+    </md-select>
+  </md-input-container>
+    <md-input-container class="customMood-container" ng-if="entry.mood === 'Custom Mood'">
+      <label for="custom">Custom Mood</label>
+      <input type="text" name="entry_custom_mood" id="customMood" ng-model="entry.customMood" required>  
+    </md-input-container>
+</div>

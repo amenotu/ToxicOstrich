@@ -1,0 +1,48 @@
+<md-dialog aria-label="Journal Entry Form"  flex="66" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span class="entryForm-title">Journal Entry Form</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-font-set="fa" class="dialog-close" aria-hidden="true" aria-label="Close dialog">&#xf00d</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  
+  <form name="entryForm" ng-model="entry" novalidate>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+      <!-- form inputs go in here -->
+        <!-- DATE AND MOOD INPUT -->
+        <div layout="row" layout-align="start center">
+          <div>
+            <md-datepicker ng-model="entry.date" md-placeholder="Enter date" required></md-datepicker>
+          </div>
+          <div data-ng-include="'app/layout/menu/menu.tmpl.html'" class="mood-menu"></div>
+        </div>
+
+        <!-- TOPIC INPUT -->
+        <md-input-container class="md-block">
+          <label>Topic</label>
+          <input name="entry_topic" ng-model="entry.topic" type="text" md-maxlength="130" maxlength="130" required>
+<!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+            <div ng-message="required">This is required!</div>
+            <div ng-message="md-maxlength">That's too long!</div>
+          </div> -->
+        </md-input-container>
+
+        <!-- ENTRY TEXT INPUT -->
+        <md-input-container class="md-block">
+          <label>Entry Text</label>
+          <textarea ng-model="entry.text" name="entry_text" required></textarea>
+        </md-input-container>
+
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer(entry)" ng-disabled="entryForm.$invalid">Submit</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

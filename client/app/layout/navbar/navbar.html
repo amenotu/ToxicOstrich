@@ -1,0 +1,20 @@
+<div id="navbar" data-ng-controller="FormDialog as vm">
+  <md-content>
+    <md-toolbar layout="row" layout-align="space-between center" class="nav-topbar">
+      <div class="navbar-header">
+      <a href="/" class="navbar-brand">
+        <i class="fa fa-anchor fa-2x navbar-icon" aria-hidden="true"></i>
+        <span class="navbar-title">Toxic Ostrich</span>
+      </a>
+      </div>
+      <div layout="row" layout-align="center center">
+        <md-button class="addEntry-btn" ng-click="vm.showAddEntryForm($event)">Add Entry</md-button>
+        <md-button class="auth-btn" ng-if="true">Sign In</md-button>
+        <md-button class="auth-btn">Sign Out</md-button>
+        <md-button class="auth-btn" ng-if="true" ng-click="vm.showSignUp($event)">Sign Up</md-button>
+      </div>
+    </md-toolbar>
+  </md-content>
+  <!-- insert template for entries here -->
+  <div data-ng-include="'app/layout/entry/entry.html'"></div>
+</div>

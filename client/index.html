@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="JournalApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <title>JournalApp</title>
+  <!-- Any Google Fonts -->
+<!--   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+<!--   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!-- App CSS & other stylesheets-->
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css" type="text/css">
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+</head>
+<body>
+  <div data-ng-include="'app/layout/navbar/navbar.html'"></div>
+  <div ui-view></div>
+
+  <!-- Dependencies -->
+  <link rel="stylesheet" href="/content/styles/styles.css">
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="/bower_components/angular-material/angular-material.min.js"></script>
+  <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- App files -->
+  <script src="/app/app.module.js"></script>
+
+  <!-- Core -->
+  <script src="/app/core/core.module.js"></script>
+  <script src="/app/core/dataservice.js"></script>
+  <script src="/app/core/processdata.js"></script>
+
+  <!-- Layout -->
+  <script src="/app/layout/layout.module.js"></script>
+  <script src="/app/layout/layout.theme.js"></script>
+  <script src="/app/layout/navbar/navbar.js"></script>
+  <script src="/app/layout/dialog/dialog.js"></script>
+  <script src="/app/layout/menu/menu.js"></script>
+</body>
+</html>

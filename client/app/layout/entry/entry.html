@@ -1,0 +1,64 @@
+<md-card class="entry-container" ng-repeat="entry in entries">
+
+  <md-card-header>
+    <md-card-avatar>
+<!--       <img class="md-user-avatar" src="avatar.png"> -->
+      <md-icon md-font-set="fa" class="avatar-icon">&#xf21b</md-icon>
+    </md-card-avatar>
+    <md-card-header-text layout="row" layout-align="start center">
+      <span class="md-title entry-title">{{entry.date.month}} {{entry.date.day}}, {{entry.date.year}}</span>
+<!--       <span class="md-subhead">Sub header</span> -->
+    </md-card-header-text>
+
+    <!-- #### THIS WILL DELETE THE ENTRY ##### -->
+    <md-button class="md-icon-button" ng-click="vm.showDeletePrompt($event, entry)">
+      <md-tooltip md-direction="top">
+          Delete Entry
+      </md-tooltip>
+      <md-icon md-font-set="fa" class="entry-icons delete-icon">&#xf057</md-icon>
+    </md-button>
+  </md-card-header>
+  <md-divider></md-divider>
+<!--   <img ng-src="/content/organized2.jpeg" class="md-card-image" alt="image caption"> -->
+<!--   <md-icon md-font-set="fa" ng-style="{'font-size': '36px'}">&#xf03e</md-icon> -->
+  <md-card-title layout="row" layout-align="center center">
+    <md-card-title-text>
+      <span class="md-headline">{{entry.topic}}</span>
+<!--       <span class="md-subhead">Card subheader</span> -->
+    </md-card-title-text>
+
+    <!-- MD-ACTIONS NEEDS NG-CLICK EVENTS -->
+    <md-card-actions layout="row" layout-align="end start">
+      <md-button class="md-icon-button" aria-label="Favorite">
+        <md-tooltip md-direction="top">
+          Favorite
+        </md-tooltip>
+        <md-icon md-font-set="fa" class="entry-icons favorite-icon">&#xf004</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Edit">
+        <md-tooltip md-direction="top">
+          Edit Entry
+        </md-tooltip>
+        <md-icon md-font-set="fa" class="entry-icons editEntry-icon" ng-click="vm.showEditForm($event, entry)">&#xf044</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Share">
+        <md-tooltip md-direction="top">
+          Share Entry
+        </md-tooltip>
+        <md-icon md-font-set="fa" class="entry-icons share-icon">&#xf064</md-icon>
+      </md-button>
+    </md-card-actions>
+  </md-card-title>
+
+  <div class="entryChips-container">
+    <md-chips ng-model="entry.moods" readonly="true">
+      <md-chip-template>
+        {{$chip}}
+      </md-chip-template>
+    </md-chips>
+  </div>
+  <md-divider></md-divider>
+  <md-card-content>
+    <div ng-bind-html="entry.text">{{entry.text}}</div>
+  </md-card-content>
+</md-card>

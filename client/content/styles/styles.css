@@ -1,0 +1,96 @@
+.navbar-brand {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.entryForm-title,
+.navbar-title {
+  font-family: 'Lobster', cursive;
+}
+
+.navbar-title {
+  font-size: 2em;
+}
+
+.entryForm-title {
+  font-size: 28px;
+}
+
+.navbar-icon,
+.addEntry-btn span,
+.auth-btn span,
+.entryForm-title,
+.navbar-title,
+.fa.dialog-close {
+  color: #FFFFFF;
+}
+
+.mood-menu,
+.editEntryChips-container {
+  margin-left: 30px;
+}
+
+.customMood-container {
+  height: 34px;
+  margin-left: 30px;
+}
+
+.entry-container {
+  margin: 40px;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.editEntry-icon:hover {
+  color: cyan;
+}
+
+.favorite-icon:hover {
+  color: violet;
+}
+
+.share-icon:hover {
+  color: orange;
+}
+
+/*.currentEntryMoods-container {
+  margin-left: 30px
+}*/
+
+.card-media {
+  background-color: #999999
+}
+
+.entryChips-container {
+  padding: 0px 0px 8px 15px;
+}
+
+.md-chips:not(.md-readonly) {
+  cursor: text;
+  height: 38px;
+}
+
+md-chips.md-default-theme .md-chips, 
+md-chips .md-chips {
+  box-shadow: 0 0px rgba(224, 224, 224, 0);
+}
+
+.md-title.entry-title {
+  font-size: 20px;
+}
+
+.fa.entry-icons,
+.fa.dialog-close {
+  font-size: 24px;
+}
+
+.fa.avatar-icon {
+  font-size: 30px;
+}
+
+.currentEntry-group {
+  padding: 15px;
+}

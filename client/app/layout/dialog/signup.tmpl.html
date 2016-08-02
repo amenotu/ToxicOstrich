@@ -1,0 +1,95 @@
+<md-dialog aria-label="Sign Up Form" flex="30" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span class="entryForm-title">Join Us Today</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-font-set="fa" class="dialog-close" aria-hidden="true" aria-label="Close dialog">&#xf00d</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  
+  <form name="signupForm" ng-model="user" novalidate>
+    <md-dialog-content>
+     <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always">
+       <md-tab label="signup">
+          <md-content class="md-padding">
+            <div class="md-dialog-content">
+            <!-- form inputs go in here -->
+
+              <!-- TOPIC INPUT -->
+              <md-input-container class="md-block">
+                <label>Name</label>
+                <input name="user_first" ng-model="user.firstName" type="text" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+
+             <md-input-container class="md-block">
+              <label>Email Address</label>
+                <input name="user_email" ng-model="user.email" type="email" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Create a Password</label>
+                <input name="user_password" ng-model="user.password" type="password" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Confirm Password</label>
+                <input name="user_password" ng-model="user.confirm" type="password" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+            </div>
+          </md-content>
+       </md-tab>
+
+       <md-tab label="signin">
+          <md-content class="md-padding">
+            <div class="md-dialog-content">
+            <!-- form inputs go in here -->
+
+              <!-- TOPIC INPUT -->
+              <md-input-container class="md-block">
+                <label>Email Address</label>
+                <input name="user_first" ng-model="user.firstName" type="text" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Password</label>
+                <input name="user_password" ng-model="user.password" type="password" required>
+      <!--           <div ng-messages="entryForm.topic.$error" ng-show="entryForm.topic.$dirty">
+                  <div ng-message="required">This is required!</div>
+                  <div ng-message="md-maxlength">That's too long!</div>
+                </div> -->
+              </md-input-container>
+            </div>
+          </md-content>
+       </md-tab>
+     </md-tabs>
+      
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer(user)" ng-disabled="signupForm.$invalid">Submit</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

@@ -1,0 +1,32 @@
+[] Set up users
+  [X] Make Users mongoose schema
+  [X] Make Sign up form/Sign in form
+  [] Store users into the database
+[] Set up authentication
+  [] Use passport
+  [] Potentially have to switch server to HTTPS instead of HTTP
+[X] Do entry layout
+[] Make a splash page/landing page
+  [] Possibly use scroll magic?
+[] Set up front-end routing
+[] Make front-end cross-browser compatible
+  [] Solve issue with fucking Firefox...regarding the edit entry form dialog
+  [] Look into a responsive front end
+[X] Change entry model to have a moods array instead of just a string
+[X] Allow CRUD operations for entries
+  [X] Create (Post)
+  [X] Read (Get)
+  [X] Update (Put)
+  [X] Delete (Delete)
+[] Set up Continuous Integration and testing
+  [] Write tests with mocha/chai/jasmine/protractor/karma (for test coverage)
+  [] Use Travis CI for continuous integration or Circle CI
+[] Create your own horizontal timeline directive by looking at other examples that use RaphaelJS
+[] Potentially deploy to Heroku
+[] Need to rework entry schema so that we know which entries belong to specific users...D'oh!
+[] Switch DB from MongoDB to SQL (Postgres maybe?)
+
+PROJECT CONCEPT
+Users can essentially use the application to record a timeline of their life through journal entries which will someday support video and photo uploads. Users can write about anything to recollect a memory or event that was significant in their life. The application will create a timeline that is both user friendly and easy to use, that displays snippets of entries on certain dates. Users may even share their timeline with friends and family, and maybe even someday see how their timelines connect with friends and family. May potentially include a feature that allows people to build a family tree... 
+
+Almost like TimeHop, but not quite....
